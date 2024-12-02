@@ -1,0 +1,1 @@
+/usr/bin/cc CMakeFiles/spaceInvaders.dir/main.c.o CMakeFiles/spaceInvaders.dir/menu.c.o -o spaceInvaders  -lSDL2 -lSDL2_image -lSDL2_ttf 

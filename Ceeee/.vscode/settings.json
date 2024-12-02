@@ -1,0 +1,17 @@
+{
+    "files.associations": {
+        "*.py": "python",
+        "stddef.h": "c",
+        "stdlib.h": "c",
+        "string.h": "c",
+        "random": "c",
+        "drawing.h": "c",
+        "algorithm": "c",
+        "unistd.h": "c",
+        "sstream": "c",
+        "*.tcc": "c",
+        "string": "c"
+    },
+    "cmake.sourceDirectory": "D:/VSB/Ceeee/SI",
+    "C_Cpp.errorSquiggles": "enabled"
+}
