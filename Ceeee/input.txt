@@ -1,2 +1,4 @@
-0 1
-you to read skripta
+jana,brno,50,2
+petr,ostrava,25,0
+pavel,praha,15,1
+naughtiest-named,p
