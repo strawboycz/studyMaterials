@@ -20,7 +20,7 @@ private:
 		bool rightWall = true;
 		bool bottomWall = true;
 		int state = 2;
-		vector<Cell*> neighbours;
+		vector<Cell*> neighbours; // top left right bottom
 		Cell(int id, vector<Cell*> neighbours): id(id), neighbours(neighbours)
 		{
 		}
@@ -32,10 +32,10 @@ private:
 			ostringstream ss;
 			int x = col * 20;
 			int y = row * 20;
-			if(leftWall) ss << "<line x1=\"" << x << "\" y1=\"" << y << "\" x2=\"" << (x + 20) << "\" y2=\"" << y << "\" stroke=\"black\" stroke-width=\"1\"/>\n";
+			if(topWall) ss << "<line x1=\"" << x << "\" y1=\"" << y << "\" x2=\"" << (x + 20) << "\" y2=\"" << y << "\" stroke=\"black\" stroke-width=\"1\"/>\n";
 			if(rightWall) ss << "<line x1=\"" << (x + 20) << "\" y1=\"" << y << "\" x2=\"" << (x + 20) << "\" y2=\"" << (y + 20) << "\" stroke=\"black\" stroke-width=\"1\"/>\n";
 			if(bottomWall) ss << "<line x1=\"" << (x + 20) << "\" y1=\"" << (y + 20) << "\" x2=\"" << x << "\" y2=\"" << (y + 20) << "\" stroke=\"black\" stroke-width=\"1\"/>\n";
-			if(topWall) ss << "<line x1=\"" << x << "\" y1=\"" << (y + 20) << "\" x2=\"" << x << "\" y2=\"" << y << "\" stroke=\"black\" stroke-width=\"1\"/>\n";
+			if(leftWall) ss << "<line x1=\"" << x << "\" y1=\"" << (y + 20) << "\" x2=\"" << x << "\" y2=\"" << y << "\" stroke=\"black\" stroke-width=\"1\"/>\n";
 			return ss.str();
 		}
 	};
@@ -47,4 +47,6 @@ public:
 	void insert(int cellId, vector<int> neighbourIds);
 	void saveSVG(string path);
 	void generatePath(unsigned int seed);
+	int size();
+	static vector<Maze::Cell*> getShuffeledNeighbours(vector<Cell*> neighbours);
 };
