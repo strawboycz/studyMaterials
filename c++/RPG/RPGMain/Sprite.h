@@ -8,8 +8,7 @@ public:
 	bool getHit(double dmg);
 	void attack(Sprite* targetSprite);
 	bool isAlive();
-
-private:
+protected:
 	double HP;
 	double baseDamage;
 };
