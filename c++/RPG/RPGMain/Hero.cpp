@@ -23,4 +23,8 @@ void Hero::getShoutedOn(Hero *other)
 {
 	std::cout << "Hey " << other->getName() << " I am not your enemy, please dont fight.\n";
 }
+void Hero::eatFood(Food* other)
+{
+	this->HP += other->getHealAmount();
+}
 

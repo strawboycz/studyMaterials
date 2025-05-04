@@ -3,6 +3,7 @@
 
 
 #include "Hero.h"
+#include "Weapon.h"
 
 int main()
 {
@@ -13,7 +14,10 @@ int main()
   {
     borec->attack(drak);
   }
-
+  Inventory* inv = new Inventory();
+  inv->addItem(new Weapon("Sword",20));
+  inv->addItem(new Food("Apple",1));
+  inv->printAllItems();
     return 0;
 }
 
