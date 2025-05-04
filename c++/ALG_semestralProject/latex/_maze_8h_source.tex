@@ -1,0 +1,58 @@
+\doxysection{Maze.\+h}
+\hypertarget{_maze_8h_source}{}\label{_maze_8h_source}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ <sstream>}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <xstring>}}
+\DoxyCodeLine{00005\ \textcolor{keyword}{using\ namespace\ }std;}
+\DoxyCodeLine{00009\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_maze_a7ecf1da4b9685f97bf3110a8479e724b}{Maze}}}
+\DoxyCodeLine{00010\ \{}
+\DoxyCodeLine{00011\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00015\ \ \ \ \ \mbox{\hyperlink{class_maze_a7ecf1da4b9685f97bf3110a8479e724b}{Maze}}();}
+\DoxyCodeLine{00021\ \ \ \ \ \mbox{\hyperlink{class_maze_a7ecf1da4b9685f97bf3110a8479e724b}{Maze}}(\textcolor{keywordtype}{int}\ rows,\ \textcolor{keywordtype}{int}\ cols);}
+\DoxyCodeLine{00022\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keywordtype}{int}\ rows;}
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{keywordtype}{int}\ cols;}
+\DoxyCodeLine{00031\ \ \ \ \ }
+\DoxyCodeLine{00032\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00036\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_maze_1_1_cell_abfc0de327345ae146539dd5b3a78e524}{Cell}}}
+\DoxyCodeLine{00037\ \ \ \ \ \{}
+\DoxyCodeLine{00038\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_maze_1_1_cell_a252cc9547ff76e54b6473c357cf06b62}{id}};}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_maze_1_1_cell_ae7588e47381cd00e9337dcef4f00de21}{leftWall}}\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_maze_1_1_cell_ac0d0b84291ba0d52230b26e6dcf9f326}{topWall}}\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_maze_1_1_cell_a1183cfe8cdc9936da4fa77bc14cad82e}{rightWall}}\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_maze_1_1_cell_aebfcf2b9f841e19d6850b96c66af0556}{bottomWall}}\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ vector<Cell*>\ \mbox{\hyperlink{class_maze_1_1_cell_a93477aa42400c76a566be68ed3e64259}{neighbours}};}
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_maze_1_1_cell_abfc0de327345ae146539dd5b3a78e524}{Cell}}(\textcolor{keywordtype}{int}\ \textcolor{keywordtype}{id},\ vector<Cell*>\ \mbox{\hyperlink{class_maze_1_1_cell_a93477aa42400c76a566be68ed3e64259}{neighbours}}):\ \mbox{\hyperlink{class_maze_1_1_cell_a252cc9547ff76e54b6473c357cf06b62}{id}}(\mbox{\hyperlink{class_maze_1_1_cell_a252cc9547ff76e54b6473c357cf06b62}{id}}),\ \mbox{\hyperlink{class_maze_1_1_cell_a93477aa42400c76a566be68ed3e64259}{neighbours}}(\mbox{\hyperlink{class_maze_1_1_cell_a93477aa42400c76a566be68ed3e64259}{neighbours}})}
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_maze_1_1_cell_aee31d46417bc8f252e8b5bb73fa1e2da}{Cell}}(\textcolor{keywordtype}{int}\ \textcolor{keywordtype}{id}):\ \mbox{\hyperlink{class_maze_1_1_cell_a252cc9547ff76e54b6473c357cf06b62}{id}}(\mbox{\hyperlink{class_maze_1_1_cell_a252cc9547ff76e54b6473c357cf06b62}{id}})}
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{string}\ \mbox{\hyperlink{class_maze_1_1_cell_a6eae511a55909d07a5b6bd363a8ec7de}{getSVG}}(\textcolor{keywordtype}{int}\ row,\ \textcolor{keywordtype}{int}\ col)}
+\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ \ \ \ \ ostringstream\ ss;}
+\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ x\ =\ col\ *\ 20;}
+\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ y\ =\ row\ *\ 20;}
+\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(\mbox{\hyperlink{class_maze_1_1_cell_ac0d0b84291ba0d52230b26e6dcf9f326}{topWall}})\ ss\ <<\ \textcolor{stringliteral}{"{}<line\ x1=\(\backslash\)"{}"{}}\ <<\ x\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)"{}\ y1=\(\backslash\)"{}"{}}\ <<\ y\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)"{}\ x2=\(\backslash\)"{}"{}}\ <<\ (x\ +\ 20)\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)"{}\ y2=\(\backslash\)"{}"{}}\ <<\ y\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)"{}\ stroke=\(\backslash\)"{}black\(\backslash\)"{}\ stroke-\/width=\(\backslash\)"{}1\(\backslash\)"{}/>\(\backslash\)n"{}};}
+\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(\mbox{\hyperlink{class_maze_1_1_cell_a1183cfe8cdc9936da4fa77bc14cad82e}{rightWall}})\ ss\ <<\ \textcolor{stringliteral}{"{}<line\ x1=\(\backslash\)"{}"{}}\ <<\ (x\ +\ 20)\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)"{}\ y1=\(\backslash\)"{}"{}}\ <<\ y\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)"{}\ x2=\(\backslash\)"{}"{}}\ <<\ (x\ +\ 20)\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)"{}\ y2=\(\backslash\)"{}"{}}\ <<\ (y\ +\ 20)\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)"{}\ stroke=\(\backslash\)"{}black\(\backslash\)"{}\ stroke-\/width=\(\backslash\)"{}1\(\backslash\)"{}/>\(\backslash\)n"{}};}
+\DoxyCodeLine{00079\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(\mbox{\hyperlink{class_maze_1_1_cell_aebfcf2b9f841e19d6850b96c66af0556}{bottomWall}})\ ss\ <<\ \textcolor{stringliteral}{"{}<line\ x1=\(\backslash\)"{}"{}}\ <<\ (x\ +\ 20)\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)"{}\ y1=\(\backslash\)"{}"{}}\ <<\ (y\ +\ 20)\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)"{}\ x2=\(\backslash\)"{}"{}}\ <<\ x\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)"{}\ y2=\(\backslash\)"{}"{}}\ <<\ (y\ +\ 20)\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)"{}\ stroke=\(\backslash\)"{}black\(\backslash\)"{}\ stroke-\/width=\(\backslash\)"{}1\(\backslash\)"{}/>\(\backslash\)n"{}};}
+\DoxyCodeLine{00080\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(\mbox{\hyperlink{class_maze_1_1_cell_ae7588e47381cd00e9337dcef4f00de21}{leftWall}})\ ss\ <<\ \textcolor{stringliteral}{"{}<line\ x1=\(\backslash\)"{}"{}}\ <<\ x\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)"{}\ y1=\(\backslash\)"{}"{}}\ <<\ (y\ +\ 20)\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)"{}\ x2=\(\backslash\)"{}"{}}\ <<\ x\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)"{}\ y2=\(\backslash\)"{}"{}}\ <<\ y\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)"{}\ stroke=\(\backslash\)"{}black\(\backslash\)"{}\ stroke-\/width=\(\backslash\)"{}1\(\backslash\)"{}/>\(\backslash\)n"{}};}
+\DoxyCodeLine{00081\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ ss.str();}
+\DoxyCodeLine{00082\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00083\ \ \ \ \ \};}
+\DoxyCodeLine{00087\ \ \ \ \ vector<Cell*>\ \mbox{\hyperlink{class_maze_a594c2235845d948676eca7b5c722adef}{cells}};}
+\DoxyCodeLine{00093\ \ \ \ \ \mbox{\hyperlink{class_maze_1_1_cell}{Cell}}*\ \mbox{\hyperlink{class_maze_a0fd46483d744d83220bf7cc0c5947b1a}{findCell}}(\textcolor{keywordtype}{int}\ \textcolor{keywordtype}{id});}
+\DoxyCodeLine{00097\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_maze_a13d6ae3b711dbab765ea3f3bb82ccfa7}{fillUp}}();}
+\DoxyCodeLine{00098\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00103\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_maze_af8b9072ad8c9ba46cf228d466b62d121}{insert}}(\textcolor{keywordtype}{int}\ cellId);}
+\DoxyCodeLine{00109\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_maze_af8b9072ad8c9ba46cf228d466b62d121}{insert}}(\textcolor{keywordtype}{int}\ cellId,\ vector<int>\ neighbourIds);}
+\DoxyCodeLine{00114\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_maze_af76c5ce4013489587ca2113c65ece715}{saveSVG}}(\textcolor{keywordtype}{string}\ path);}
+\DoxyCodeLine{00119\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_maze_afc47ea645b6b932bc15c842f716a5efe}{size}}();}
+\DoxyCodeLine{00124\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_maze_af2c48713fb3d21d446634d5fda421c3a}{generatePath}}(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ *seed);}
+\DoxyCodeLine{00130\ \ \ \ \ \textcolor{keyword}{static}\ vector<Maze::Cell*>\ \mbox{\hyperlink{class_maze_aedda19e563b75ff7e32b101e56b50623}{getShuffeledNeighbours}}(vector<Cell*>\ neighbours);}
+\DoxyCodeLine{00131\ \};}
+
+\end{DoxyCode}

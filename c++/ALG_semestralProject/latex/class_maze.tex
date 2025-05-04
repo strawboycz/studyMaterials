@@ -1,0 +1,193 @@
+\doxysection{Maze Class Reference}
+\hypertarget{class_maze}{}\label{class_maze}\index{Maze@{Maze}}
+
+
+Třída reprezentující celé bludiště  
+
+
+
+
+{\ttfamily \#include $<$Maze.\+h$>$}
+
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_maze_1_1_cell}{Cell}}
+\begin{DoxyCompactList}\small\item\em Třída reprezentující buňku v bludišti. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_maze_a7ecf1da4b9685f97bf3110a8479e724b}\label{class_maze_a7ecf1da4b9685f97bf3110a8479e724b} 
+{\bfseries Maze} ()
+\begin{DoxyCompactList}\small\item\em Základní konsturktor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_maze_ada54fc443084b2a737906fb8328bbe86}{Maze}} (int rows, int cols)
+\begin{DoxyCompactList}\small\item\em Konstruktor podle zadaných cols a rows. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_maze_1_1_cell}{Cell}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_maze_a0fd46483d744d83220bf7cc0c5947b1a}{find\+Cell}} (int id)
+\begin{DoxyCompactList}\small\item\em Najde buňku v bludišti podle id. \end{DoxyCompactList}\item 
+\Hypertarget{class_maze_a13d6ae3b711dbab765ea3f3bb82ccfa7}\label{class_maze_a13d6ae3b711dbab765ea3f3bb82ccfa7} 
+void {\bfseries fill\+Up} ()
+\begin{DoxyCompactList}\small\item\em Naplní bludiště novými buňkami. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_maze_af8b9072ad8c9ba46cf228d466b62d121}{insert}} (int cell\+Id)
+\begin{DoxyCompactList}\small\item\em Vloží novou buňku do bludiště \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_maze_a28619342c30790e27d843348d11d7fb9}{insert}} (int cell\+Id, vector$<$ int $>$ neighbour\+Ids)
+\begin{DoxyCompactList}\small\item\em Vloží novou buňku se seznamem sousedů do bludiště \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_maze_af76c5ce4013489587ca2113c65ece715}{save\+SVG}} (string path)
+\begin{DoxyCompactList}\small\item\em Uloží bludiště ve formátu SVG do souboru podle path. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_maze_afc47ea645b6b932bc15c842f716a5efe}{size}} ()
+\begin{DoxyCompactList}\small\item\em Vrací počet buněk v bludišti. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_maze_af2c48713fb3d21d446634d5fda421c3a}{generate\+Path}} (unsigned int \texorpdfstring{$\ast$}{*}seed)
+\begin{DoxyCompactList}\small\item\em Vygeneruje cestu bludištěm. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static vector$<$ \mbox{\hyperlink{class_maze_1_1_cell}{Maze\+::\+Cell}} \texorpdfstring{$\ast$}{*} $>$ \mbox{\hyperlink{class_maze_aedda19e563b75ff7e32b101e56b50623}{get\+Shuffeled\+Neighbours}} (vector$<$ \mbox{\hyperlink{class_maze_1_1_cell}{Cell}} \texorpdfstring{$\ast$}{*} $>$ neighbours)
+\begin{DoxyCompactList}\small\item\em Vrací zamíchaný seznam sousedů \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_maze_a594c2235845d948676eca7b5c722adef}\label{class_maze_a594c2235845d948676eca7b5c722adef} 
+vector$<$ \mbox{\hyperlink{class_maze_1_1_cell}{Cell}} \texorpdfstring{$\ast$}{*} $>$ {\bfseries cells}
+\begin{DoxyCompactList}\small\item\em seznam obsahující buňky v bludišti \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Třída reprezentující celé bludiště 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_maze_ada54fc443084b2a737906fb8328bbe86}\index{Maze@{Maze}!Maze@{Maze}}
+\index{Maze@{Maze}!Maze@{Maze}}
+\doxysubsubsection{\texorpdfstring{Maze()}{Maze()}}
+{\footnotesize\ttfamily \label{class_maze_ada54fc443084b2a737906fb8328bbe86} 
+Maze\+::\+Maze (\begin{DoxyParamCaption}\item[{int}]{rows}{, }\item[{int}]{cols}{}\end{DoxyParamCaption})}
+
+
+
+Konstruktor podle zadaných cols a rows. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em rows} & počet řádků bludiště\\
+\hline
+{\em cols} & počet sloupců bludiště\\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_maze_a0fd46483d744d83220bf7cc0c5947b1a}\index{Maze@{Maze}!findCell@{findCell}}
+\index{findCell@{findCell}!Maze@{Maze}}
+\doxysubsubsection{\texorpdfstring{findCell()}{findCell()}}
+{\footnotesize\ttfamily \label{class_maze_a0fd46483d744d83220bf7cc0c5947b1a} 
+\mbox{\hyperlink{class_maze_1_1_cell}{Maze\+::\+Cell}} \texorpdfstring{$\ast$}{*} Maze\+::find\+Cell (\begin{DoxyParamCaption}\item[{int}]{id}{}\end{DoxyParamCaption})}
+
+
+
+Najde buňku v bludišti podle id. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & id buňky\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Cell\texorpdfstring{$\ast$}{*} buňka
+\end{DoxyReturn}
+\Hypertarget{class_maze_af2c48713fb3d21d446634d5fda421c3a}\index{Maze@{Maze}!generatePath@{generatePath}}
+\index{generatePath@{generatePath}!Maze@{Maze}}
+\doxysubsubsection{\texorpdfstring{generatePath()}{generatePath()}}
+{\footnotesize\ttfamily \label{class_maze_af2c48713fb3d21d446634d5fda421c3a} 
+void Maze\+::generate\+Path (\begin{DoxyParamCaption}\item[{unsigned int \texorpdfstring{$\ast$}{*}}]{seed}{}\end{DoxyParamCaption})}
+
+
+
+Vygeneruje cestu bludištěm. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em seed} & počáteční hodnota generátoru náhodných čísel\\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_maze_aedda19e563b75ff7e32b101e56b50623}\index{Maze@{Maze}!getShuffeledNeighbours@{getShuffeledNeighbours}}
+\index{getShuffeledNeighbours@{getShuffeledNeighbours}!Maze@{Maze}}
+\doxysubsubsection{\texorpdfstring{getShuffeledNeighbours()}{getShuffeledNeighbours()}}
+{\footnotesize\ttfamily \label{class_maze_aedda19e563b75ff7e32b101e56b50623} 
+vector$<$ \mbox{\hyperlink{class_maze_1_1_cell}{Maze\+::\+Cell}} \texorpdfstring{$\ast$}{*} $>$ Maze\+::get\+Shuffeled\+Neighbours (\begin{DoxyParamCaption}\item[{vector$<$ \mbox{\hyperlink{class_maze_1_1_cell}{Cell}} \texorpdfstring{$\ast$}{*} $>$}]{neighbours}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Vrací zamíchaný seznam sousedů 
+
+
+\begin{DoxyParams}{Parameters}
+{\em neighbours} & původní seznam sousedů\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+vector$<$\+Cell\texorpdfstring{$\ast$}{*}$>$ zamíchaný seznam sousedů
+\end{DoxyReturn}
+\Hypertarget{class_maze_af8b9072ad8c9ba46cf228d466b62d121}\index{Maze@{Maze}!insert@{insert}}
+\index{insert@{insert}!Maze@{Maze}}
+\doxysubsubsection{\texorpdfstring{insert()}{insert()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{class_maze_af8b9072ad8c9ba46cf228d466b62d121} 
+void Maze\+::insert (\begin{DoxyParamCaption}\item[{int}]{cell\+Id}{}\end{DoxyParamCaption})}
+
+
+
+Vloží novou buňku do bludiště 
+
+
+\begin{DoxyParams}{Parameters}
+{\em cell\+Id} & index buňky v bludišti\\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_maze_a28619342c30790e27d843348d11d7fb9}\index{Maze@{Maze}!insert@{insert}}
+\index{insert@{insert}!Maze@{Maze}}
+\doxysubsubsection{\texorpdfstring{insert()}{insert()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{class_maze_a28619342c30790e27d843348d11d7fb9} 
+void Maze\+::insert (\begin{DoxyParamCaption}\item[{int}]{cell\+Id}{, }\item[{vector$<$ int $>$}]{neighbour\+Ids}{}\end{DoxyParamCaption})}
+
+
+
+Vloží novou buňku se seznamem sousedů do bludiště 
+
+
+\begin{DoxyParams}{Parameters}
+{\em cell\+Id} & index buňky v bludišti\\
+\hline
+{\em neighbour\+Ids} & indexy sousedních buněk v bludišti\\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_maze_af76c5ce4013489587ca2113c65ece715}\index{Maze@{Maze}!saveSVG@{saveSVG}}
+\index{saveSVG@{saveSVG}!Maze@{Maze}}
+\doxysubsubsection{\texorpdfstring{saveSVG()}{saveSVG()}}
+{\footnotesize\ttfamily \label{class_maze_af76c5ce4013489587ca2113c65ece715} 
+void Maze\+::save\+SVG (\begin{DoxyParamCaption}\item[{string}]{path}{}\end{DoxyParamCaption})}
+
+
+
+Uloží bludiště ve formátu SVG do souboru podle path. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em path} & cesta k výstupnímu souboru\\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_maze_afc47ea645b6b932bc15c842f716a5efe}\index{Maze@{Maze}!size@{size}}
+\index{size@{size}!Maze@{Maze}}
+\doxysubsubsection{\texorpdfstring{size()}{size()}}
+{\footnotesize\ttfamily \label{class_maze_afc47ea645b6b932bc15c842f716a5efe} 
+int Maze\+::size (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Vrací počet buněk v bludišti. 
+
+\begin{DoxyReturn}{Returns}
+int počet buněk v bludišti
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Maze.\+h\item 
+Maze.\+cpp\end{DoxyCompactItemize}

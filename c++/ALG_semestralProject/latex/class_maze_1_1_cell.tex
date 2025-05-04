@@ -1,0 +1,107 @@
+\doxysection{Maze\+::Cell Class Reference}
+\hypertarget{class_maze_1_1_cell}{}\label{class_maze_1_1_cell}\index{Maze::Cell@{Maze::Cell}}
+
+
+Třída reprezentující buňku v bludišti.  
+
+
+
+
+{\ttfamily \#include $<$Maze.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_maze_1_1_cell_abfc0de327345ae146539dd5b3a78e524}{Cell}} (int \mbox{\hyperlink{class_maze_1_1_cell_a252cc9547ff76e54b6473c357cf06b62}{id}}, vector$<$ \mbox{\hyperlink{class_maze_1_1_cell}{Cell}} \texorpdfstring{$\ast$}{*} $>$ \mbox{\hyperlink{class_maze_1_1_cell_a93477aa42400c76a566be68ed3e64259}{neighbours}})
+\begin{DoxyCompactList}\small\item\em Konstruktor se seznamem sousedů \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_maze_1_1_cell_aee31d46417bc8f252e8b5bb73fa1e2da}{Cell}} (int \mbox{\hyperlink{class_maze_1_1_cell_a252cc9547ff76e54b6473c357cf06b62}{id}})
+\begin{DoxyCompactList}\small\item\em Konstruktor pouze s indexem. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{class_maze_1_1_cell_a6eae511a55909d07a5b6bd363a8ec7de}{get\+SVG}} (int row, int col)
+\begin{DoxyCompactList}\small\item\em Vrací SVG zápis buňky. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_maze_1_1_cell_a252cc9547ff76e54b6473c357cf06b62}\label{class_maze_1_1_cell_a252cc9547ff76e54b6473c357cf06b62} 
+int {\bfseries id}
+\begin{DoxyCompactList}\small\item\em určuje index buňky v bludišti \end{DoxyCompactList}\item 
+\Hypertarget{class_maze_1_1_cell_ae7588e47381cd00e9337dcef4f00de21}\label{class_maze_1_1_cell_ae7588e47381cd00e9337dcef4f00de21} 
+bool {\bfseries left\+Wall} = true
+\begin{DoxyCompactList}\small\item\em reprezentuje jestli má buňka levou stěnu \end{DoxyCompactList}\item 
+\Hypertarget{class_maze_1_1_cell_ac0d0b84291ba0d52230b26e6dcf9f326}\label{class_maze_1_1_cell_ac0d0b84291ba0d52230b26e6dcf9f326} 
+bool {\bfseries top\+Wall} = true
+\begin{DoxyCompactList}\small\item\em reprezentuje jestli má buňka horní stěnu \end{DoxyCompactList}\item 
+\Hypertarget{class_maze_1_1_cell_a1183cfe8cdc9936da4fa77bc14cad82e}\label{class_maze_1_1_cell_a1183cfe8cdc9936da4fa77bc14cad82e} 
+bool {\bfseries right\+Wall} = true
+\begin{DoxyCompactList}\small\item\em reprezentuje jestli má buňka pravou stěnu \end{DoxyCompactList}\item 
+\Hypertarget{class_maze_1_1_cell_aebfcf2b9f841e19d6850b96c66af0556}\label{class_maze_1_1_cell_aebfcf2b9f841e19d6850b96c66af0556} 
+bool {\bfseries bottom\+Wall} = true
+\begin{DoxyCompactList}\small\item\em reprezentuje jestli má buňka spodní stěnu \end{DoxyCompactList}\item 
+\Hypertarget{class_maze_1_1_cell_a93477aa42400c76a566be68ed3e64259}\label{class_maze_1_1_cell_a93477aa42400c76a566be68ed3e64259} 
+vector$<$ \mbox{\hyperlink{class_maze_1_1_cell}{Cell}} \texorpdfstring{$\ast$}{*} $>$ {\bfseries neighbours}
+\begin{DoxyCompactList}\small\item\em seznam sousedů buňky \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Třída reprezentující buňku v bludišti. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_maze_1_1_cell_abfc0de327345ae146539dd5b3a78e524}\index{Maze::Cell@{Maze::Cell}!Cell@{Cell}}
+\index{Cell@{Cell}!Maze::Cell@{Maze::Cell}}
+\doxysubsubsection{\texorpdfstring{Cell()}{Cell()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{class_maze_1_1_cell_abfc0de327345ae146539dd5b3a78e524} 
+Maze\+::\+Cell\+::\+Cell (\begin{DoxyParamCaption}\item[{int}]{id}{, }\item[{vector$<$ \mbox{\hyperlink{class_maze_1_1_cell}{Cell}} \texorpdfstring{$\ast$}{*} $>$}]{neighbours}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Konstruktor se seznamem sousedů 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & index buňky v bludišti\\
+\hline
+{\em neighbours} & seznam sousedů\\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_maze_1_1_cell_aee31d46417bc8f252e8b5bb73fa1e2da}\index{Maze::Cell@{Maze::Cell}!Cell@{Cell}}
+\index{Cell@{Cell}!Maze::Cell@{Maze::Cell}}
+\doxysubsubsection{\texorpdfstring{Cell()}{Cell()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{class_maze_1_1_cell_aee31d46417bc8f252e8b5bb73fa1e2da} 
+Maze\+::\+Cell\+::\+Cell (\begin{DoxyParamCaption}\item[{int}]{id}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Konstruktor pouze s indexem. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & index buňky v bludišti\\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_maze_1_1_cell_a6eae511a55909d07a5b6bd363a8ec7de}\index{Maze::Cell@{Maze::Cell}!getSVG@{getSVG}}
+\index{getSVG@{getSVG}!Maze::Cell@{Maze::Cell}}
+\doxysubsubsection{\texorpdfstring{getSVG()}{getSVG()}}
+{\footnotesize\ttfamily \label{class_maze_1_1_cell_a6eae511a55909d07a5b6bd363a8ec7de} 
+string Maze\+::\+Cell\+::get\+SVG (\begin{DoxyParamCaption}\item[{int}]{row}{, }\item[{int}]{col}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Vrací SVG zápis buňky. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em row} & Řádek bludiště, ve kterém se buňka nachází\\
+\hline
+{\em col} & Sloupec bludiště, ve kterém se buňka nachází\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string s SVG zápisem buňky
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Maze.\+h\end{DoxyCompactItemize}

@@ -26,22 +26,22 @@ void Maze::fillUp()
 			Cell* curent = this->findCell(cols * i + j);
 			if (i > 0)
 			{
-				curent->neighbours.push_back(this->findCell(cols * (i - 1) + j)); // top neighbour
+				curent->neighbours.push_back(this->findCell(cols * (i - 1) + j)); 
 			}
 			else curent->neighbours.push_back(nullptr);
 			if (j > 0)
 			{
-				curent->neighbours.push_back(this->findCell(cols * i + j - 1)); // left neighbout
+				curent->neighbours.push_back(this->findCell(cols * i + j - 1)); 
 			}
 			else curent->neighbours.push_back(nullptr);
 			if (j < cols - 1)
 			{
-				curent->neighbours.push_back(this->findCell(cols * i + j + 1)); // right neighbour
+				curent->neighbours.push_back(this->findCell(cols * i + j + 1)); 
 			}
 			else curent->neighbours.push_back(nullptr);
 			if (i < rows - 1)
 			{
-				curent->neighbours.push_back(this->findCell(cols * (i + 1) + j)); // bottom neighbour
+				curent->neighbours.push_back(this->findCell(cols * (i + 1) + j)); 
 			}
 			else curent->neighbours.push_back(nullptr);
 
@@ -111,14 +111,21 @@ int Maze::size()
 vector<Maze::Cell*> Maze::getShuffeledNeighbours(vector<Cell*> neighbours)
 {
 	vector<Cell*> copy = neighbours;
-	std::random_device rd;
-	std::mt19937 g(rd());
-	std::shuffle(copy.begin(), copy.end(), g);
+	for (int i = copy.size() - 1; i > 0; i--)
+	{
+		int j = rand() % (i+ 1);
+		swap(copy[j], copy[i]);
+	}
+	
+
 	return copy;
 }
-void Maze::generatePath(unsigned int seed)
+void Maze::generatePath(unsigned int *seed)
 {
-	srand(seed);
+	if (seed)
+	{
+		srand(*seed);
+	}
 	int startIndex = rand() % cols;
 
 	stack<Cell*> stack;
@@ -135,14 +142,12 @@ void Maze::generatePath(unsigned int seed)
 		stack.pop();
 
 		vector<Cell*> neighbours = this->getShuffeledNeighbours(current->neighbours);
-		cout << "Current cell: " << current->id << endl;
 		
 			for (auto neighbour :neighbours)
 			{
 
 				if (neighbour && !visited[neighbour->id])
 				{
-					cout << "Neighbour cell: " << neighbour->id << endl;
 
 					visited[neighbour->id] = true;
 
@@ -175,6 +180,7 @@ void Maze::generatePath(unsigned int seed)
 			
 	}
 	int endIndex = rand() % ((rows * cols - 1) - (rows * (cols - 1)) + 1) + rows * (cols - 1);
+
 	this->findCell(endIndex)->bottomWall = false;
 
 }

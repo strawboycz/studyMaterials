@@ -24,7 +24,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Maze.h">
-      <Filter>Zdrojové soubory</Filter>
+      <Filter>Hlavičkové soubory</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
