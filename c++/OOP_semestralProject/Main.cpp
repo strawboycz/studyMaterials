@@ -11,3 +11,7 @@ konstruktory a destruktor této tøídy.
 • V hlavní èásti bude vytvoøení a pouití nìkolika instancí a volání metod.
 • U kadé tøídy je vhodné také do poznámky v kódu krátce popsat, co tøída reprezentuje.
 */
+int main()
+{
+	return 0;
+}

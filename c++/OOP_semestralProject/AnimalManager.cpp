@@ -1,13 +1,13 @@
 ﻿#include "AnimalManager.h"
 
-int AnimalManager::getCurrentId()
+int AnimalManager::getAnimalCount()
 {
-	return currentId;
+	return animalCount;
 }
 
-void AnimalManager::setCurrentId(int current_id)
+void AnimalManager::setAnimalCount(int animalCount)
 {
-	currentId = current_id;
+	this->animalCount = animalCount;
 }
 
 vector<Animal*> AnimalManager::getAnimals()
@@ -21,5 +21,6 @@ void AnimalManager::setAnimals(const vector<Animal*>& animals)
 }
 void AnimalManager::addAnimal(Animal* animal)
 {
+	this->animalCount++;
 	this->animals.push_back(animal);
 }

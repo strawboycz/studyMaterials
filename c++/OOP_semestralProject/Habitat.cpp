@@ -13,3 +13,7 @@ string Habitat::toString()
 {
 	return "Habitat " + this->name + " " + this->number;
 }
+Habitat::Habitat(string name, string number, int animalCapacity) : Building(name, number), animalCapacity(animalCapacity)
+{
+	
+}
