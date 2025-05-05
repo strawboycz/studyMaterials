@@ -3,6 +3,9 @@
 
 #include "Animal.h"
 using namespace std;
+/// <summary>
+/// Třída pro správu konkrétních zvířat v systému
+/// </summary>
 static class AnimalManager
 {
 public:
@@ -11,8 +14,9 @@ public:
 	int getAnimalCount();
 	void setAnimalCount(int animalCount);
 	vector<Animal*> getAnimals();
-	void setAnimals(const vector<Animal*>& animals);
+	void setAnimals(vector<Animal*>& animals);
 	void addAnimal(Animal* animal);
+	void printAnimals();
 private:
 	int animalCount = 0;
 	vector<Animal*> animals;

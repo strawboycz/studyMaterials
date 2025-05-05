@@ -1,6 +1,8 @@
 ﻿#pragma once
 #include "Building.h"
-
+/// <summary>
+/// Třída představující výběh 
+/// </summary>
 class Habitat : public Building
 {
 public:

@@ -1,6 +1,9 @@
 ﻿#pragma once
 #include "Habitat.h"
 
+/// <summary>
+/// Třída reprezentující venkovní výběh
+/// </summary>
 class OutdoorHabitat : public Habitat
 {
 public:

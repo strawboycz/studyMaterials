@@ -1,6 +1,9 @@
 ﻿#pragma once
 #include <string>
 using namespace std;
+/// <summary>
+/// Základní třída pro všechny budovy
+/// </summary>
 class Building
 {
 public:

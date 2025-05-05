@@ -2,6 +2,9 @@
 #include <string>
 #include "Sex.h"
 using namespace std;
+/// <summary>
+/// Třída reprezentující konkrétní zvíře
+/// </summary>
 class Animal
 {
 public:
@@ -14,6 +17,8 @@ public:
 	void setSpecies(string species);
 	Sex getSex();
 	void setSex(Sex sex);
+	string toString();
+
 protected:
 	int id;
 	string name;

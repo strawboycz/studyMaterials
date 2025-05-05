@@ -1,4 +1,7 @@
 ﻿#include "Animal.h"
+
+#include <iostream>
+
 Animal::Animal(string name)
 {
 	this->name = name;
@@ -42,4 +45,11 @@ void Animal::setSex(Sex sex)
 	this->sex = sex;
 }
 
+string Animal::toString() {
+	cout << "Animal Information:" << endl;
+	cout << "ID: " << id << endl;
+	cout << "Name: " << name << endl;
+	cout << "Species: " << species << endl;
+	cout << "Sex: " << (sex == male) ? "male" : ((sex==female) ? "female" : "unspecified") << endl;
+}
 
