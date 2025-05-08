@@ -13,3 +13,7 @@ OutdoorHabitat::OutdoorHabitat(string name, string number,int animalCapacity, st
 {
 	
 }
+string OutdoorHabitat::toString()
+{
+	return Habitat::toString() + " with biome " + this->getBiome();
+}

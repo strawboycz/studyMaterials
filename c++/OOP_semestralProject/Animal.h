@@ -1,5 +1,7 @@
 ﻿#pragma once
 #include <string>
+
+#include "Building.h"
 #include "Sex.h"
 using namespace std;
 /// <summary>
@@ -8,7 +10,8 @@ using namespace std;
 class Animal
 {
 public:
-	Animal(string name);
+	Animal(int id, string name, string species, Sex sex, Building* keptAt);
+	~Animal();
 	string getName();
 	void setName(string name);
 	int getId();
@@ -18,9 +21,11 @@ public:
 	Sex getSex();
 	void setSex(Sex sex);
 	string toString();
-
-protected:
+	Building* getKeptAt();
+	void setKeptAt(Building*& building);
+private:
 	int id;
+	Building* keptAt;
 	string name;
 	string species;
 	Sex sex;

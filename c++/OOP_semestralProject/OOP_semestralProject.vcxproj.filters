@@ -36,25 +36,37 @@
     <ClCompile Include="OutdoorHabitat.cpp">
       <Filter>Zdrojové soubory</Filter>
     </ClCompile>
+    <ClCompile Include="Zookeeper.cpp">
+      <Filter>Zdrojové soubory</Filter>
+    </ClCompile>
+    <ClCompile Include="Person.cpp">
+      <Filter>Zdrojové soubory</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Animal.h">
-      <Filter>Zdrojové soubory</Filter>
-    </ClInclude>
-    <ClInclude Include="Sex.h">
-      <Filter>Zdrojové soubory</Filter>
+      <Filter>Hlavičkové soubory</Filter>
     </ClInclude>
     <ClInclude Include="AnimalManager.h">
-      <Filter>Zdrojové soubory</Filter>
+      <Filter>Hlavičkové soubory</Filter>
     </ClInclude>
     <ClInclude Include="Building.h">
-      <Filter>Zdrojové soubory</Filter>
+      <Filter>Hlavičkové soubory</Filter>
     </ClInclude>
     <ClInclude Include="Habitat.h">
-      <Filter>Zdrojové soubory</Filter>
+      <Filter>Hlavičkové soubory</Filter>
     </ClInclude>
     <ClInclude Include="OutdoorHabitat.h">
-      <Filter>Zdrojové soubory</Filter>
+      <Filter>Hlavičkové soubory</Filter>
+    </ClInclude>
+    <ClInclude Include="Person.h">
+      <Filter>Hlavičkové soubory</Filter>
+    </ClInclude>
+    <ClInclude Include="Sex.h">
+      <Filter>Hlavičkové soubory</Filter>
+    </ClInclude>
+    <ClInclude Include="Zookeeper.h">
+      <Filter>Hlavičkové soubory</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

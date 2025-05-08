@@ -12,9 +12,9 @@ void AnimalManager::setAnimalCount(int animalCount)
 	this->animalCount = animalCount;
 }
 
-vector<Animal*> AnimalManager::getAnimals()
+vector<Animal*>& AnimalManager::getAnimals()
 {
-	return animals;
+	return this->animals;
 }
 
 void AnimalManager::setAnimals(vector<Animal*>& animals)
@@ -34,3 +34,29 @@ void AnimalManager::printAnimals()
 	}
 }
 
+Animal* AnimalManager::getAnimal(int id)
+{
+	for (auto animal : this->animals)
+	{
+		if (animal->getId() == id) return animal;
+	}
+}
+
+vector<Animal*> AnimalManager::getAnimals(string name)
+{
+	vector<Animal*> outp;
+	for (auto animal : this->animals)
+	{
+		if (animal->getName() == name) outp.push_back(animal);
+	}
+	return outp;
+}
+vector<Animal*> AnimalManager::getAnimals(Habitat* habitat)
+{
+	vector<Animal*> outp;
+	for (auto animal : this->animals)
+	{
+		if (animal->getKeptAt() == habitat) outp.push_back(animal);
+	}
+	return outp;
+}

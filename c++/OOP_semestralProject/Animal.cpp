@@ -2,9 +2,9 @@
 
 #include <iostream>
 
-Animal::Animal(string name)
+Animal::Animal(int id, string name, string species, Sex sex, Building* keptAt) : id(id), name(name), species(species), sex(sex), keptAt(keptAt)
 {
-	this->name = name;
+
 }
 string Animal::getName()
 {
@@ -46,10 +46,29 @@ void Animal::setSex(Sex sex)
 }
 
 string Animal::toString() {
-	cout << "Animal Information:" << endl;
-	cout << "ID: " << id << endl;
-	cout << "Name: " << name << endl;
-	cout << "Species: " << species << endl;
-	cout << "Sex: " << (sex == male) ? "male" : ((sex==female) ? "female" : "unspecified") << endl;
+	string outp;
+	outp += "Animal Information:\n";
+	outp += "ID: " + std::to_string(id) + "\n";
+	outp += "Name: " + name + "\n";
+	outp += "Species: " + species + "\n";
+	std::string sexStr = (sex == male) ? "male" :
+		(sex == female) ? "female" :
+		"unspecified";
+
+	outp += "Sex: " + sexStr + "\n";
+	return outp;
 }
 
+Building* Animal::getKeptAt()
+{
+	return this->keptAt;
+}
+
+void Animal::setKeptAt(Building *& building)
+{
+	this->keptAt = building;
+}
+Animal::~Animal()
+{
+	delete this->keptAt;
+}
