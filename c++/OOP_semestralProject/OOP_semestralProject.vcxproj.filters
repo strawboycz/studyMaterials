@@ -42,6 +42,9 @@
     <ClCompile Include="Person.cpp">
       <Filter>Zdrojové soubory</Filter>
     </ClCompile>
+    <ClCompile Include="IdManager.cpp">
+      <Filter>Zdrojové soubory</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Animal.h">
@@ -67,6 +70,9 @@
     </ClInclude>
     <ClInclude Include="Zookeeper.h">
       <Filter>Hlavičkové soubory</Filter>
+    </ClInclude>
+    <ClInclude Include="IdManager.h">
+      <Filter>Zdrojové soubory</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

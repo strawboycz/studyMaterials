@@ -2,33 +2,27 @@
 
 #include <iostream>
 
-int AnimalManager::getAnimalCount()
-{
-	return animalCount;
-}
-
-void AnimalManager::setAnimalCount(int animalCount)
-{
-	this->animalCount = animalCount;
-}
-
 vector<Animal*>& AnimalManager::getAnimals()
 {
-	return this->animals;
+	return animals;
 }
 
-void AnimalManager::setAnimals(vector<Animal*>& animals)
+void AnimalManager::setAnimals(vector<Animal*>& newAnimals)
 {
-	this->animals = animals;
+	animals = newAnimals;
 }
 void AnimalManager::addAnimal(Animal* animal)
 {
-	this->animalCount++;
-	this->animals.push_back(animal);
+	animals.push_back(animal);
 }
+void AnimalManager::addAnimal(int id, string name,Sex sex ,string species, Building* habitat)
+{
+	animals.push_back(new Animal(id,name,species,sex,habitat));
+}
+
 void AnimalManager::printAnimals()
 {
-	for (auto animal : this->animals)
+	for (auto animal : animals)
 	{
 		cout << animal->toString() << endl;
 	}
@@ -36,7 +30,7 @@ void AnimalManager::printAnimals()
 
 Animal* AnimalManager::getAnimal(int id)
 {
-	for (auto animal : this->animals)
+	for (auto animal : animals)
 	{
 		if (animal->getId() == id) return animal;
 	}
@@ -45,7 +39,7 @@ Animal* AnimalManager::getAnimal(int id)
 vector<Animal*> AnimalManager::getAnimals(string name)
 {
 	vector<Animal*> outp;
-	for (auto animal : this->animals)
+	for (auto animal : animals)
 	{
 		if (animal->getName() == name) outp.push_back(animal);
 	}
@@ -54,9 +48,15 @@ vector<Animal*> AnimalManager::getAnimals(string name)
 vector<Animal*> AnimalManager::getAnimals(Habitat* habitat)
 {
 	vector<Animal*> outp;
-	for (auto animal : this->animals)
+	for (auto animal : animals)
 	{
 		if (animal->getKeptAt() == habitat) outp.push_back(animal);
 	}
 	return outp;
+}
+void AnimalManager::cleanup() {
+	for (auto animal : this->animals) {
+		delete animal;
+	}
+	this->animals.clear();
 }

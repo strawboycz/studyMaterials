@@ -70,5 +70,4 @@ void Animal::setKeptAt(Building *& building)
 }
 Animal::~Animal()
 {
-	delete this->keptAt;
 }

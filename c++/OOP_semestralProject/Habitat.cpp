@@ -1,4 +1,8 @@
 ﻿#include "Habitat.h"
+Habitat::~Habitat()
+{
+	
+}
 
 int Habitat::getAnimalCapacity()
 {
