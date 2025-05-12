@@ -92,7 +92,7 @@ void Maze::insert(int cellId, vector<int> neighbourIds)
 void Maze::saveSVG(string path)
 {
 	ofstream file(path);
-	file << "<svg width=\"" << this->cols * 20 << "\" height=\"" << this->rows * 20 << "130\" xmlns=\"http://www.w3.org/2000/svg\">" << endl;
+	file << "<svg width=\"" << this->cols * 20 << "\" height=\"" << this->rows * 20 << "\" xmlns=\"http://www.w3.org/2000/svg\">" << endl;
 	for (int i = 0; i < rows; ++i)
 	{
 		for (int j = 0; j < cols; ++j)
