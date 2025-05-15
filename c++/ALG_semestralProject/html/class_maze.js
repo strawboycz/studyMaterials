@@ -11,5 +11,7 @@ var class_maze =
     [ "insert", "class_maze.html#a28619342c30790e27d843348d11d7fb9", null ],
     [ "saveSVG", "class_maze.html#af76c5ce4013489587ca2113c65ece715", null ],
     [ "size", "class_maze.html#afc47ea645b6b932bc15c842f716a5efe", null ],
-    [ "cells", "class_maze.html#a594c2235845d948676eca7b5c722adef", null ]
+    [ "cells", "class_maze.html#a594c2235845d948676eca7b5c722adef", null ],
+    [ "cols", "class_maze.html#a1a6f00c9f285a1945d58219ff0a87a17", null ],
+    [ "rows", "class_maze.html#a9d51f4618d04648b9faff86dd0caf55a", null ]
 ];
