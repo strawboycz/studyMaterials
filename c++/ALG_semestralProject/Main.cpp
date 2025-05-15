@@ -32,5 +32,6 @@ int main(int argc, char* argv[])
 
 	cout << "Maze generated!" << endl;
 	delete seed;
+	delete maze;
 	return 0;
 }

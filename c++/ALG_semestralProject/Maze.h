@@ -19,6 +19,10 @@ public:
 	/// <param name="rows">počet řádků bludiště</param>
 	/// <param name="cols">počet sloupců bludiště</param>
 	Maze(int rows, int cols);
+	/// <summary>
+	///	Destruktor
+	/// </summary>
+	~Maze();
 private:
 	/// <summary>
 	/// počet řádků bludiště

@@ -3,6 +3,7 @@ var class_maze =
     [ "Cell", "class_maze_1_1_cell.html", "class_maze_1_1_cell" ],
     [ "Maze", "class_maze.html#a7ecf1da4b9685f97bf3110a8479e724b", null ],
     [ "Maze", "class_maze.html#ada54fc443084b2a737906fb8328bbe86", null ],
+    [ "~Maze", "class_maze.html#a4f187353f595193318ac66133a22287e", null ],
     [ "fillUp", "class_maze.html#a13d6ae3b711dbab765ea3f3bb82ccfa7", null ],
     [ "findCell", "class_maze.html#a0fd46483d744d83220bf7cc0c5947b1a", null ],
     [ "generatePath", "class_maze.html#af2c48713fb3d21d446634d5fda421c3a", null ],

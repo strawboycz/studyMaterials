@@ -59,6 +59,17 @@ Maze::Maze(int rows, int cols) : rows(rows), cols(cols)
 {
 	this->fillUp();
 }
+
+Maze::~Maze()
+{
+	for (int i = 0; i < rows; i++) {
+		for (int j = 0; j < cols; j++) {
+			delete cells[cols * i + j];
+		}
+	}
+}
+
+
 void Maze::insert(int cellId)
 {
 	if (this->findCell(cellId)) return;
